@@ -3,7 +3,7 @@
 %define libname %mklibname %name %api %major
 %define develname %mklibname -d %name
 Name:           gstreamermm
-Version:        0.10.3
+Version:        0.10.4
 Release:        %mkrel 1
 Summary:        C++ wrapper for GStreamer library
 Group:          Sound
