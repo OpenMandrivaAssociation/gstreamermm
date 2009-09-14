@@ -2,8 +2,10 @@
 %define major 2
 %define libname %mklibname %name %api %major
 %define develname %mklibname -d %name
+%define gpdmajor 0
+%define libnamegetplugindefs %mklibname %{name}-get-plugin-defs %api %gpdmajor
 Name:           gstreamermm
-Version:        0.10.5
+Version:        0.10.5.1
 Release:        %mkrel 1
 Summary:        C++ wrapper for GStreamer library
 Group:          Sound
@@ -34,10 +36,20 @@ GStreamermm is a C++ wrapper library for the multimedia library
 GStreamer (http://gstreamer.freedesktop.org).  It is designed to allow
 C++ development of applications that work with multi-media.
 
+%package -n %libnamegetplugindefs
+Summary:        C++ wrapper for GStreamer library
+Group:          System/Libraries
+
+%description -n %libnamegetplugindefs
+GStreamermm is a C++ wrapper library for the multimedia library
+GStreamer (http://gstreamer.freedesktop.org).  It is designed to allow
+C++ development of applications that work with multi-media.
+
 %package -n %develname
 Summary:        Headers for developing programs that will use %{name}
 Group:          Development/C++
 Requires:       %{libname} = %{version}-%{release}
+Requires:	%libnamegetplugindefs = %{version}-%{release}
 Provides: lib%name-devel = %version-%release
 
 
@@ -59,11 +71,6 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT installed-docs/
 %makeinstall_std
-# Move documentation to gtk-doc directory
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/gtk-doc/html
-mv $RPM_BUILD_ROOT%{_docdir}/%{name}-0.10/docs/reference/html $RPM_BUILD_ROOT%{_datadir}/gtk-doc/html/%{name}-0.10
-
-mv %buildroot%_datadir/doc/%name-%api installed-docs/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -77,13 +84,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-, root, root, -)
 %doc AUTHORS NEWS README
 %{_libdir}/libgstreamermm-%api.so.%{major}*
-%{_libdir}/libgstreamermm_get_plugin_defs-%api.so.%{major}*
+
+%files -n %libnamegetplugindefs
+%defattr(-, root, root, -)
+%{_libdir}/libgstreamermm_get_plugin_defs-%api.so.%{gpdmajor}*
 
 %files -n %develname
 %defattr(-, root, root, -)
 %doc ChangeLog
-%doc installed-docs/*
-%doc %{_datadir}/gtk-doc/html/%{name}-%api
+%_datadir/devhelp/books/%name-%api
+%doc %{_datadir}/doc/%name-%api
 %{_includedir}/gstreamermm-%api
 %{_libdir}/*.so
 %{_libdir}/*.la
