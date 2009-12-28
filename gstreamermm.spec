@@ -2,10 +2,10 @@
 %define major 2
 %define libname %mklibname %name %api %major
 %define develname %mklibname -d %name
-%define gpdmajor 0
+%define gpdmajor %major
 %define libnamegetplugindefs %mklibname %{name}-get-plugin-defs %api %gpdmajor
 Name:           gstreamermm
-Version:        0.10.5.2
+Version:        0.10.6
 Release:        %mkrel 1
 Summary:        C++ wrapper for GStreamer library
 Group:          Sound
