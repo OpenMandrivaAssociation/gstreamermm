@@ -5,13 +5,14 @@
 %define gpdmajor %major
 %define libnamegetplugindefs %mklibname %{name}-get-plugin-defs %api %gpdmajor
 Name:           gstreamermm
-Version:        0.10.8
+Version:        0.10.9
 Release:        %mkrel 1
 Summary:        C++ wrapper for GStreamer library
 Group:          Sound
 License:        LGPLv2+
 URL:            http://www.gtkmm.org/
 Source0:        http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+Patch0:		gstreamermm-0.10.9-fix-linking.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: glibmm2.4-devel >= 2.16.0
@@ -60,6 +61,8 @@ developing gstreamermm applications.
 
 %prep
 %setup -q
+%apply_patches
+autoreconf -fi
 
 %build
 export GST_INSPECT=%_bindir/gst-inspect-0.10
