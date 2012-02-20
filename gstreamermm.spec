@@ -99,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/doc/%name-%api
 %{_includedir}/gstreamermm-%api
 %{_libdir}/*.so
-%{_libdir}/*.la
 %_libdir/%name-%api
 %{_libdir}/pkgconfig/*.pc
 
