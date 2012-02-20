@@ -5,13 +5,13 @@
 %define gpdmajor %major
 %define libnamegetplugindefs %mklibname %{name}-get-plugin-defs %api %gpdmajor
 Name:           gstreamermm
-Version:        0.10.10
+Version:        0.10.10.1
 Release:        %mkrel 1
 Summary:        C++ wrapper for GStreamer library
 Group:          Sound
 License:        LGPLv2+
 URL:            http://www.gtkmm.org/
-Source0:        http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+Source0:        http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 Patch0:		gstreamermm-0.10.9-fix-linking.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
