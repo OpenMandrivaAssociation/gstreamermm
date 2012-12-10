@@ -103,3 +103,105 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/*.pc
 
 
+
+
+%changelog
+* Tue May 15 2012 Götz Waschk <waschk@mandriva.org> 0.10.10.2-1mdv2012.0
++ Revision: 798945
+- update to new version 0.10.10.2
+
+* Mon Feb 20 2012 Götz Waschk <waschk@mandriva.org> 0.10.10.1-1
++ Revision: 777938
+- remove libtool archive
+- new version
+- update source URL
+
+* Thu Jul 21 2011 Götz Waschk <waschk@mandriva.org> 0.10.10-1
++ Revision: 690828
+- update to new version 0.10.10
+
+* Thu Apr 28 2011 Götz Waschk <waschk@mandriva.org> 0.10.9.1-1
++ Revision: 659817
+- update to new version 0.10.9.1
+
+* Fri Apr 15 2011 Götz Waschk <waschk@mandriva.org> 0.10.9-1
++ Revision: 653099
+- new version
+- fix linking
+
+* Sat Oct 16 2010 Götz Waschk <waschk@mandriva.org> 0.10.8-1mdv2011.0
++ Revision: 586002
+- update to new version 0.10.8
+
+* Sun Jul 11 2010 Götz Waschk <waschk@mandriva.org> 0.10.7.3-1mdv2011.0
++ Revision: 550816
+- update to new version 0.10.7.3
+
+* Tue Apr 13 2010 Götz Waschk <waschk@mandriva.org> 0.10.7-1mdv2010.1
++ Revision: 534063
+- update to new version 0.10.7
+
+* Mon Dec 28 2009 Götz Waschk <waschk@mandriva.org> 0.10.6-1mdv2010.1
++ Revision: 482954
+- new version
+- new major
+
+* Tue Sep 22 2009 Götz Waschk <waschk@mandriva.org> 0.10.5.2-1mdv2010.0
++ Revision: 447186
+- update to new version 0.10.5.2
+
+* Mon Sep 14 2009 Götz Waschk <waschk@mandriva.org> 0.10.5.1-1mdv2010.0
++ Revision: 439372
+- new version
+- split library package
+- update file list
+- fix installation
+
+* Thu Sep 03 2009 Götz Waschk <waschk@mandriva.org> 0.10.5-1mdv2010.0
++ Revision: 427537
+- update to new version 0.10.5
+
+* Thu Aug 20 2009 Götz Waschk <waschk@mandriva.org> 0.10.4-1mdv2010.0
++ Revision: 418390
+- update to new version 0.10.4
+
+* Wed Aug 19 2009 Götz Waschk <waschk@mandriva.org> 0.10.3-1mdv2010.0
++ Revision: 418279
+- update to new version 0.10.3
+
+* Wed May 27 2009 Götz Waschk <waschk@mandriva.org> 0.10.2-1mdv2010.0
++ Revision: 380292
+- new version
+- udpate file list
+
+* Thu Feb 19 2009 Götz Waschk <waschk@mandriva.org> 0.10.1-1mdv2009.1
++ Revision: 342797
+- import gstreamermm
+
+
+* Thu Feb 19 2009 Götz Waschk <waschk@mandriva.org> 0.10.1-1mdv2009.1
+- adapt Fedora spec
+
+* Sun Dec 28 2008 Denis Leroy <denis@poolshark.org> - 0.9.8-2
+- Rebuild for pkgconfig
+
+* Fri Dec 26 2008 Denis Leroy <denis@poolshark.org> - 0.9.8-1
+- Update to upstream 0.9.8
+- Disabled parallel make
+
+* Fri Oct 10 2008 Denis Leroy <denis@poolshark.org> - 0.9.7-1
+- Update to upstream 0.9.7
+
+* Wed Sep  3 2008 Denis Leroy <denis@poolshark.org> - 0.9.6-1
+- Update to upstream 0.9.6
+
+* Sat May 31 2008 Denis Leroy <denis@poolshark.org> - 0.9.5-1
+- Update to upstream 0.9.5
+- Fixed gstreamer plugin BuildRequires 
+
+* Fri Feb 22 2008 Denis Leroy <denis@poolshark.org> - 0.9.4-1
+- Updated to upstream 0.9.4
+
+* Sun Feb 17 2008 Denis Leroy <denis@poolshark.org> - 0.9.2-1
+- First draft
+
