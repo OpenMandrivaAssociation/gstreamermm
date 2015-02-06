@@ -1,6 +1,6 @@
 Name: gstreamermm
 Version: 0.10.11
-Release: %mkrel 1
+Release: 2
 Summary: C++ wrapper for GStreamer library
 Group: System/Libraries
 License: LGPLv2+
