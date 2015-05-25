@@ -1,15 +1,15 @@
 Name: gstreamermm
-Version: 0.10.11
-Release: 2
+Version: 1.4.3
+Release: 1
 Summary: C++ wrapper for GStreamer library
 Group: System/Libraries
 License: LGPLv2+
 URL: http://www.gtkmm.org/
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gstreamermm/0.10/%{name}-%{version}.tar.xz
 BuildRequires: pkgconfig(giomm-2.4) >= 2.28.0
-BuildRequires: pkgconfig(gstreamer-0.10) >= 0.10.36
+BuildRequires: pkgconfig(gstreamer-1.0) >= 0.10.36
 BuildRequires: pkgconfig(libxml++-2.6) >= 2.14
-BuildRequires: pkgconfig(gstreamer-plugins-base-0.10) >= 0.10.36
+BuildRequires: pkgconfig(gstreamer-plugins-base-1.0) >= 0.10.36
 BuildRequires: doxygen graphviz m4
 
 %description
@@ -17,8 +17,8 @@ GStreamermm is a C++ wrapper library for the multimedia library
 GStreamer (http://gstreamer.freedesktop.org). It is designed to allow
 C++ development of applications that work with multi-media.
 
-%define api 0.10
-%define major 2
+%define api 1.0
+%define major 0
 %define libname %mklibname %name %api %major
 
 %package -n %libname
