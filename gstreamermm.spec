@@ -4,7 +4,7 @@ Release: 1
 Summary: C++ wrapper for GStreamer library
 Group: System/Libraries
 License: LGPLv2+
-URL: http://www.gtkmm.org/
+URL: https://www.gtkmm.org/
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gstreamermm/0.10/%{name}-%{version}.tar.xz
 BuildRequires: pkgconfig(giomm-2.4) >= 2.28.0
 BuildRequires: pkgconfig(gstreamer-1.0) >= 0.10.36
