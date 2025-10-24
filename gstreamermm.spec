@@ -73,6 +73,8 @@ documentation browser or through a web browser.
 %autosetup -p1
 
 %build
+export CC=gcc
+export CXX=g++
 %configure --enable-shared \
 	--disable-dependency-tracking
 %make_build
