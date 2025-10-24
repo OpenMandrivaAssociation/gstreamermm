@@ -6,6 +6,8 @@ Group: System/Libraries
 License: LGPLv2+
 URL: https://www.gtkmm.org/
 Source0: http://ftp.gnome.org/pub/GNOME/sources/gstreamermm/1.10/%{name}-%{version}.tar.xz
+Patch0:		gstreamermm-1.8.0-cast.patch
+Patch1:		0001-Fix-build-against-glib-2.68.patch
 BuildRequires:	pkgconfig(giomm-2.4) >= 2.36.0
 BuildRequires:	pkgconfig(gstreamer-1.0) >= 1.4.3
 BuildRequires:	pkgconfig(gstreamer-app-1.0) >= 1.4.3
